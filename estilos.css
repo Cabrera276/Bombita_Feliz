@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Fredoka One', cursive;
+  background: url('https://i.imgur.com/tTI1xWg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.contenedor {
+  max-width: 700px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+h1 {
+  font-size: 3em;
+  color: #FF4081;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #FFB6C1;
+}
+
+.formulario {
+  margin: 20px 0;
+}
+
+input[type="text"],
+input[type="date"] {
+  padding: 12px;
+  font-size: 1em;
+  border: 3px solid #FF4081;
+  border-radius: 10px;
+  width: 40%;
+  margin-right: 8px;
+  transition: transform 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  transform: scale(1.05);
+  outline: none;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1em;
+  background: #FF4081;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background: #E91E63;
+  transform: scale(1.1) rotate(-2deg);
+}
+
+.lista ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lista li {
+  background: #FFE4E1;
+  margin: 12px 0;
+  padding: 16px;
+  border-radius: 12px;
+  position: relative;
+  text-align: left;
+  animation: slideIn 0.5s ease-out;
+}
+
+.lista li:nth-child(odd) { background: #FFF0F0; }
+
+.lista li button {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  background: #F44336;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.lista li button:hover {
+  background: #d32f2f;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-50%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
